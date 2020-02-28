@@ -1,187 +1,703 @@
-/*{font-family: Poppins ; } ; 
-body{
+.Box {
     overflow: hidden;
-/* } */
+    font-family: Poppins;
+    height: 6850px;
+}
 
-.card{
+.card {
     border: 0;
 }
-.logo{
-    width: 40px;
+
+.Image1 {
+    position: relative;
+    top: 20px;
+}
+
+.A {
+    position: relative;
+    bottom: 50px;
+}
+
+.B {
+    position: relative;
+    bottom: 90px;
+}
+
+.c {
+    position: relative;
+    bottom: 50px;
+}
+
+.card-img {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top: 20px;
+}
+
+.card-text {
+    padding: 1em;
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
     height: 30px;
 }
 
-.card-header{
+.svgs {
+    display: none;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.card-header {
     background: white;
 }
 
-  
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 80px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+.About {
+    position: relative;
+    display: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+.icons {
+    position: relative;
+    width: 40px;
+    height: auto;
+    display: none;
 }
 
-#menuToggle a:hover
-{
-  color: tomato;
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 80px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
 }
+
+#menuToggle a:hover {
+    color: tomato;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
 
 /*
- * Just a quick hamburger
+ * Just a quick hamburgerP
  */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  left: 200px;
- bottom: 80px;
-  background: black;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+#menuToggle span {
+    display: block;
+    width: 40px;
+    height: 6px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 200px;
+    bottom: 110px;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
 }
+
 
 /* 
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
 }
+
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
+
 
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
 }
+
 
 /*
  * Make this absolute positioned
  * at the top left of the screen
  */
- #menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: black;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased; 
-  /* to stop flickering of text in safari */
-  
-   transform-origin: 0% 0%;
-  transform: translate(-200%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- } 
 
-#menu li 
- {
-  padding: 10px 0;
-  font-size: 22px;
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: black;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-200%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
 
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-} 
 
-.card-title{
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+.card-title {
     color: #4c95fc;
 }
 
-.wraper{
-    background:  #4c95fc;
+.wraper {
+    background: #4c95fc;
     color: white;
     text-align: center;
+    padding: 2em;
 }
 
-.Thembi{
+.Thembi {
     width: 150px;
     height: auto;
 }
 
-.Thembi-sComent{
-position: relative;
-bottom:150px ;
-left: 170px;
+.Thembi-sComent {
+    position: relative;
+    bottom: 150px;
+    left: 170px;
 }
 
-.get{
-    background: #4c95fc ;
+button {
+    background: #4c95fc;
+    border: none;
+    position: relative;
+    bottom: 100px;
     width: 200px;
-    height:80px ;
+    height: 80px;
+    left: 85px;
+    text-align: center;
+    color: white;
 }
+
+.get {
+    position: relative;
+    bottom: 120px;
+}
+
+.patnersH {
+    position: relative;
+    bottom: 10px;
+}
+
+.patner {
+    position: relative;
+    top: 10px;
+}
+
+.join {
+    position: relative;
+    bottom: 120px;
+}
+
+.patner {
+    position: relative;
+    bottom: 80px;
+}
+
+.prosSection {
+    position: relative;
+    bottom: 90px;
+}
+
+.patnersSec {
+    position: relative;
+    bottom: 180px;
+}
+
+.FoundersSec {
+    position: relative;
+    bottom: 300px;
+    text-align: center;
+}
+
+.team {
+    position: relative;
+    bottom: 220px;
+}
+
+.card-group {
+    position: relative;
+    top: 30px;
+}
+
+.BackLink {
+    position: relative;
+    left: 80px;
+}
+
+.wavy-flat-stroke {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.FoundersSecCards {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: size 1;
+    font-weight: normal;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .About {
+        position: relative;
+        font-weight: 0;
+        text-decoration: underline;
+        display: inline;
+        top: 5px;
+    }
+    .card {
+        position: relative;
+        display: inline;
+    }
+    .svgs {
+        display: block;
+        float: right;
+    }
+    .LogoName {
+        position: relative;
+        display: none;
+    }
+    #menuToggle {
+        position: relative;
+        display: none;
+    }
+    .icons {
+        position: relative;
+        width: 40px;
+        height: auto;
+        display: flex;
+    }
+    .heading {
+        position: relative;
+        text-align: left;
+        font-size: 4em;
+        top: 40px;
+    }
+    .background {
+        position: relative;
+        padding: 2em;
+        display: inline-block;
+        font-size: 1em;
+        margin-right: 2em;
+        top: 30px;
+    }
+    .wraper {
+        position: relative;
+        text-align: right;
+        column-count: 3;
+        top: 70px;
+    }
+    .number {
+        position: relative;
+        right: 160px;
+    }
+    .numberText {
+        position: relative;
+        right: 160px;
+    }
+    .numberTone {
+        position: relative;
+        right: 200px;
+    }
+    .Image1 {
+        position: relative;
+        top: 80px;
+        left: 150px;
+        width: 200px;
+        height: auto;
+    }
+    .titles {
+        position: relative;
+        right: 350px;
+        bottom: -5px;
+    }
+    .custormers-Section {
+        position: relative;
+        top: 10vh;
+    }
+    .card-img {
+        position: relative;
+        padding: 2em;
+        bottom: 800px;
+        left: 130px;
+        width: 200px;
+    }
+    .get {
+        position: relative;
+        left: 40vw;
+        bottom: 60px;
+    }
+    .card-text {
+        position: relative;
+        text-align: left;
+        right: 200px;
+        font-size: -1em;
+        top: 60px;
+    }
+    .text-muted {
+        position: relative;
+        left: 40vw;
+        bottom: 3vh;
+    }
+    .prosSection {
+        position: relative;
+        top: 40px;
+        text-align: left;
+    }
+    .TitleTwo {
+        position: relative;
+        right: -100px;
+        bottom: -5px;
+    }
+    .join {
+        position: relative;
+        top: -50px;
+        left: 40vw;
+    }
+    .patnersSec {
+        position: relative;
+        top: 50px;
+        right: 10px;
+    }
+    .team {
+        position: relative;
+        top: 40px;
+    }
+    .patnersH {
+        position: relative;
+        right: 400px;
+    }
+    .FoundersSec {
+        position: relative;
+        padding: 2em;
+        top: 200px;
+        padding: 2em;
+    }
+    .FoundersSecCards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .foot {
+        position: relative;
+        width: 100%;
+        top: 50px;
+        right: 10px;
+    }
+    .touchB {
+        position: relative;
+        left: 20px;
+        top: 30px;
+    }
+    .FoundersPic {
+        position: absolute;
+        right: 350px;
+        top: -20px;
+    }
+    .FoundersPic1 {
+        position: absolute;
+        bottom: 480px;
+        left: 400px;
+    }
+    .FHaeding {
+        position: absolute;
+        bottom: 600px;
+        left: 500px;
+    }
+    #stroke {
+        display: block;
+        width: 1500px;
+        height: 54px;
+    }
+    .GoTo {
+        font-size: 22px;
+        overflow-y: hidden;
+    }
+    #back {
+        width: 23px;
+        height: 30px;
+        position: relative;
+        bottom: 30px;
+        left: 145px;
+    }
+}
+
+
+/* @media only screen and (min-width: 1280px) {
+    .Box {
+        overflow: hidden;
+    }
+    .card {
+        display: inline;
+    }
+    .svgs {
+        display: block;
+        float: right;
+    }
+    .LogoName {
+        position: relative;
+        display: none;
+    }
+    #menuToggle {
+        position: relative;
+        display: none;
+    }
+    .icons {
+        position: relative;
+        width: 40px;
+        height: auto;
+        display: flex;
+    }
+    .heading {
+        position: relative;
+        text-align: left;
+        font-size: 3em;
+        top: 20px;
+    }
+    .background {
+        position: relative;
+        padding: 2em;
+        display: inline-block;
+        font-size: 2em;
+        margin-right: 1em;
+        bottom: 200px;
+    }
+    .wraper {
+        position: relative;
+        text-align: right;
+        column-count: 3;
+        top: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .number {
+        position: relative;
+        right: 160px;
+    }
+    .numberText {
+        position: relative;
+        right: 160px;
+    }
+    .numberTone {
+        position: relative;
+        right: 200px;
+    }
+    .Image1 {
+        position: relative;
+        top: 100px;
+        left: 150px;
+        width: 100px;
+        height: auto;
+    }
+    .titles {
+        position: relative;
+        right: 350px;
+        bottom: 50px;
+        size: 1em;
+    }
+    .custormers-Section {
+        position: relative;
+        top: 10vh;
+        font-size: 2em;
+    }
+    .card-img {
+        position: relative;
+        padding: 2em;
+        bottom: 500px;
+        left: 130px;
+        width: 200px;
+    }
+    .get {
+        position: relative;
+        left: 40vw;
+        bottom: 100px;
+        width: 300px;
+    }
+    .card-text {
+        position: relative;
+        text-align: left;
+        right: 200px;
+        font-size: -1em;
+        top: 60px;
+    }
+    .text-muted {
+        position: relative;
+        left: 40vw;
+        bottom: 3vh;
+    }
+    .prosSection {
+        position: relative;
+        top: 40px;
+        text-align: left;
+        font-size: 2em;
+    }
+    .TitleTwo {
+        position: relative;
+        right: -100px;
+        bottom: 10px;
+        font-size: 1em;
+    }
+    .join {
+        position: relative;
+        top: -50px;
+        left: 40vw;
+        width: 300px;
+    }
+    .patnersSec {
+        position: relative;
+        top: 50px;
+        right: 10px;
+    }
+    .teamH {
+        position: relative;
+        right: 300px;
+    }
+    .team {
+        position: relative;
+        top: 40px;
+        font-size: 2em;
+    }
+    .Job-b {
+        width: 300px;
+        height: 100px;
+        text-align: center;
+    }
+    .patnersH {
+        position: relative;
+        right: 300px;
+        font-size: 2em;
+    }
+    .patner {
+        position: relative;
+        top: 50px;
+        left: -200px;
+        font-size: 2em;
+    }
+    .FoundersSec {
+        position: relative;
+        padding: 2em;
+        top: 100px;
+        padding: 2em;
+        font-size: 2em;
+    }
+    .FoundersSecCards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .foot {
+        position: relative;
+        width: 100%;
+        top: 50px;
+        right: 10px;
+    }
+    .touchB {
+        position: absolute;
+        right: 300px;
+        bottom: 1200px;
+    }
+    .FoundersPic {
+        position: absolute;
+        right: 350px;
+        top: 10px;
+    }
+    .FoundersPic1 {
+        position: absolute;
+        top: 10px;
+        left: 400px;
+    }
+    .FHaeding {
+        position: absolute;
+        top: -60px;
+        left: 500px;
+        font-size: 1em;
+    }
+    /* #stroke {
+        display: block;
+        width: 1500px;
+        height: 54px;
+    }
+    .GoTo {
+        font-size: 22px;
+        overflow-y: hidden;
+    }
+    #back {
+        width: 23px;
+        height: 30px;
+        position: relative;
+        bottom: 30px;
+        left: 145px;
+    }
+
+*/
+
+
+}
+*/
